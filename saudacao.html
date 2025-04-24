@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scaled=1.0">
+        <title>Saudacao</title>
+    </head>
+    <style>
+        img{
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+    <body>
+        <h1>Saudação referente ao horario</h1>
+        <input type="number" id="teste" placeholder="Teste" onchange="atualizarHora();">
+        <h2 id="bomalgo"></h2>
+        <p id="hora"></p>
+        <p id="data"></p>
+        <img src="#" id="imagem">
+
+        <script>
+            atualizarHora();
+            function atualizarHora(){
+                const vari = new Date()
+                let hora = vari.getHours()
+                let min = vari.getMinutes()
+                let dia = vari.getDate()
+                let mes = vari.getMonth()
+                let ano = vari.getFullYear()
+                let saud = ''
+                let img = document.getElementById('imagem')
+                let teste = document.getElementById('teste')
+
+                if (teste.value.length==0){
+                    console.log("1");
+                    if (hora >= 6 && hora <= 11){
+                        saud = 'Bom Dia!'
+                        img.src = 'image/manha.png'
+                    }else if (hora >= 12 && hora <= 17){
+                        saud = 'Boa Tarde!'
+                        img.src = 'image/tarde.png'
+                    }else if (hora >= 18 && hora <= 23){
+                        saud = 'Boa Noite!'
+                        img.src = 'image/noite.png'
+                    }else if (hora >= 0 && hora <=5){
+                        saud = 'Boa Madrugada!'
+                        img.src = 'image/madrugada.png'
+                    }
+                }else{
+                    hora = teste.value
+                    console.log("2");
+                    if (hora >= 6 && hora <= 11){
+                        saud = 'Bom Dia!'
+                        img.src = 'image/manha.png'
+                    }else if (hora >= 12 && hora <= 17){
+                        saud = 'Boa Tarde!'
+                        img.src = 'image/tarde.png'
+                    }else if (hora >= 18 && hora <= 23){
+                        saud = 'Boa Noite!'
+                        img.src = 'image/noite.png'
+                    }else if (hora >= 0 && hora <=5){
+                        saud = 'Boa Madrugada!'
+                        img.src = 'image/madrugada.png'
+                    }
+                }
+                document.getElementById('bomalgo').innerHTML = saud
+                document.getElementById('hora').innerHTML =`${hora}:${min}`
+                document.getElementById('data').innerHTML = `${dia}/${mes}/${ano}`
+            }    
+        </script>
+    </body>
+</html>

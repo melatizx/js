@@ -14,11 +14,11 @@
     </head>
     <body>
         <h1>Trocando Imagem</h1>
-        <img src="imgverde.webp" id="imagem" onmouseenter="trocar()">
+        <img src="image/imgverde.webp" id="imagem" onmouseenter="trocar(this, 'image/imgvermelho.webp')" onmouseleave="trocar(this, 'image/imgverde.webp')">
 
         <script>
-            function trocar(){
-                document.getElementById()
+            function trocar(imagemElement, novaImagem){
+                imagemElement.src = novaImagem 
             }
         </script>
     </body>

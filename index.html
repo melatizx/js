@@ -3,15 +3,43 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scaled=1.0">
+        <link rel="stylesheet" href="css/index.css">
         <title>JS</title>
     </head>
     <body>
-        <h1>Testes de JS</h1>
-        <ul>
-            <li><a href="somar.html">Somar</a></li>
-            <li><a href="imagem.html">Trocar imagem</a></li>
-            <li><a href="saudacao.html">Saudação</a></li>
-            <li><a href="tabuada.html">Tabuada</a></li>
-        </ul>
+        <h1 class="title">Testes de JS</h1>
+        <section class="atividades">
+            <section class="acessar">
+                <h2 class="subtitulo">Somar</h2>
+                <a href="atividades/somar.html"><img src="image/aindex.png" class="aindex"></a>
+            </section>
+            <section class="acessar">
+                <h2 class="subtitulo">Imagem</h2>
+                <a href="atividades/imagem.html"><img src="image/aindex.png" class="aindex"></a>
+            </section>
+            <section class="acessar">
+                <h2 class="subtitulo">Saudação</h2>
+                <a href="atividades/saudacao.html"><img src="image/aindex.png" class="aindex"></a>
+            </section>
+        </section>
+        <section class="atividades">
+            <section class="acessar">
+                <h2 class="subtitulo">Tabuada</h2>
+                <a href="atividades/tabuada.html"><img src="image/aindex.png" class="aindex"></a>
+            </section>
+            <section class="acessar">
+                <h2 class="subtitulo">-</h2>
+                <a onclick="alerta1()"><img src="image/aindex.png" class="aindex"></a>
+            </section>
+            <section class="acessar">
+                <h2 class="subtitulo">-</h2>
+                <a onclick="alerta1()"><img src="image/aindex.png" class="aindex"></a>
+            </section>
+        </section>
+        <script>
+            function alerta1(){
+                alert('Ainda não há conteudo aqui, volte em breve :)')
+            }
+        </script>
     </body>
 </html>

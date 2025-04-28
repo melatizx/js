@@ -1,0 +1,23 @@
+.title{
+    font-size: 70px;
+    text-align: center;
+}
+.aindex{
+    width: 250px;
+    height: 250px;
+}
+.acessar{
+    text-align: center;
+    align-items: center;
+    margin: 100px;
+}
+.atividades{
+    display: flex;
+    flex-direction: row;
+    margin: 30px;
+    align-items: center;
+    justify-content: center;
+}
+.subtitulo{
+    font-size: 40px;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scaled=1.0">
+        <!-- <link rel="stylesheet" href="css/index.css"> -->
+        <title>Agenda</title>
+    </head>
+    <body>
+        <h1>Agenda</h1>
+        <input id="compromisso" placeholder="Compromisso">
+        <input type="button" value="Adicionar" onclick="adicionar()">
+        <select>
+            <option value="1">Prioridade</option>
+            <option value="2">Urgente</option>
+            <option value="3">Moderada</option>
+            <option value="4">Tranquila</option>
+        </select>
+
+        <ul id="conteudo_agenda">
+        </ul>
+
+        <script>
+            function adicionar(){
+                let compromisso = document.getElementById('compromisso')
+                let tag_ul = document.getElementById("conteudo_agenda")
+
+                let tag_li = document.createElement('li');
+                tag_li.innerHTML = `${compromisso}` 
+                tag_ul.appendChild(tag_li)
+
+            }
+        </script>
+    </body>
+</html>

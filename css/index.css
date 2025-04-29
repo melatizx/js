@@ -21,3 +21,51 @@
 .subtitulo{
     font-size: 40px;
 }
+
+.acessar:hover{
+    transform: scale(1.05);
+    transition-duration: 0.4s;
+}
+
+/* rodape */
+.controle-rodape{
+    display: flex;
+    width: 100%;
+}
+footer{
+    background-color: black;
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+.controle-rodape footer nav{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 100%;
+    height: 30px;
+    background-color: black;
+}
+.redes{
+    display: flex;
+    flex-direction: row;
+}
+.feitopor{
+    width: 100%;
+ }
+ .redes a{
+    width: 60px;
+}
+.redes img{
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
+}
+.redes img:hover{
+    width: 25px;
+    height: 25px;
+    transition-duration: 0.5s;
+}
+/* --- */

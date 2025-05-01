@@ -6,42 +6,58 @@
         <link rel="stylesheet" href="../css/agenda.css">
         <title>Agenda</title>
     </head>
+
     <body>
         <h1>Agenda</h1>
-        <main>
+        <main class="introducao">
             <section class="adicionar">
-                <input id="compromisso" placeholder="Compromisso">
-                <input type="button" value="Adicionar" onclick="adicionar()">
+                <section class="subtitulo">
+                    <label class="subtitulo">Adicione um novo compromisso</label>
+                </section>
+                <section class="entradas">
+                    <input id="compromisso" placeholder="Compromisso" class="compromisso">
+                    <input type="time">
+                    <input type="button" value="Adicionar" class="botaoadicionar" onclick="adicionar()">
+                </section>
             </section>
             <section class="select">
-                <select>
-                    <option value="1">Prioridade</option>
-                    <option value="2">Urgente</option>
-                    <option value="3">Moderada</option>
-                    <option value="4">Tranquila</option>
-                </select>
+                <section class="subtitulo">
+                    <label class="subtitulo">Adicione a importância do compromisso</label>
+                </section>
+                <section class="entradas">
+                    <select class="prioridade">
+                        <option value="1">Prioridade</option>
+                        <option value="2">Urgente</option>
+                        <option value="3">Moderada</option>
+                        <option value="4">Tranquila</option>
+                    </select>
+                </section>
             </section>
         </main>
+
         <main>
             <section>
                 <ol id="conteudo_agenda">
                 </ol>
-            </section>
+            </section>    
         </main>
 
         <script>
+
             function adicionar(){
                 let compromisso = document.getElementById('compromisso').value
                 let tag_ul = document.getElementById("conteudo_agenda")
                 let timestamp = Date.now(); 
+                console.log(timestamp)
                 let tag_li = document.createElement('li');
-                tag_li.setAttribute("id", timestamp);
-                tag_li.innerHTML = `<input type='checkbox' onclick="feito()">${compromisso}<a type="button" value="Editar" id="edittext" onclick="editar(${timestamp})"><img class="imgcompromisso" src="../image/iconeditar.webp"></a><input type="button" value="Excluir" onclick="excluir(${timestamp})">` 
+                let tag_input = document.createElement('input');
+                tag_li.innerHTML = `
+                                    <input type='checkbox' onclick="feito()"><span class="compromisso_adc">${compromisso}</span>
+                                    <input type="text" id="editar_${timestamp}" value="${compromisso}" class="editar_compromisso" />
+                                    <a value="Editar" id="edittext" onclick="editar(${timestamp})"><img src="../image/pencil-square.svg"></a>
+                                    <a onclick="excluir(${timestamp})"><img src="../image/trash.svg"></a>
+                                    ` 
                 tag_ul.appendChild(tag_li)
-
-            }
-            function feito(){
-
             }
 
             function excluir(idElemento){
@@ -51,7 +67,7 @@
             }
 
             function editar(idElemento){
-                
+               let 
             }
         </script>
     </body>
